@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Flicomastic | Diseñador web</title>
+	<link rel="stylesheet" href="css/style.css"> <!-- Animate letters -->
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body onunload="">
+	<header>
+		<div class="general-wrapper">
+			<a href="index.html" class="logo-header fade-in"></a>
+		</div>
+	</header>
+	<section class="proyects-view">
+		<div class="general-wrapper">
+			<header>
+				<h1>Onedocthree</h1>
+				<div class="image-top"><img src="images/header-1doc3.jpg" alt="Header 1doc3"></div>
+			</header>
+			<div class="section-text-proyect">
+				<p class="type-proyect">Startup | Web app</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto tempora doloremque atque itaque sit, ad perspiciatis iste maiores officiis nemo odit. Hic ea deserunt fuga nemo beatae, quae natus fugit, dolorum corporis. Placeat necessitatibus libero commodi, aspernatur perspiciatis neque molestiae voluptatem, nulla optio id nam at perferendis qui provident sint.</p>
+			</div>
+			<aside>
+				<ul class="tags tags-proyects">
+					<li><span class="tag">Ux</span></li>
+					<li><span class="tag">Wireframes</span></li>
+				  	<li><span class="tag">Ui</span></li>
+				  	<li><span class="tag">Html</span></li>
+				  	<li><span class="tag">Css</span></li>
+				  	<li><span class="tag">Responsive</span></li>
+				</ul>
+			</aside>
+			<div class="content-images">
+				<img src="images/1doc3-01.jpg">
+				<img src="images/1doc3-03.jpg">
+				<img src="images/1doc3-02.jpg">
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="wrapper-footer">
+			<a class="bio-footer fade-in" href="fabian-fernandez.html">|BIO</a>
+			<ul class="social">
+				<li><a href="https://twitter.com/flicomastic" target="_blank" class="btn-twitter">Twitter</a></li>
+				<li><a href="https://instagram.com/flicomastic" target="_blank" class="btn-instagram">Instagram</a></li>
+				<li><a href="https://www.linkedin.com/in/flicomastic" target="_blank" class="btn-spotify">LinkedIn</a></li>
+				<li><a href="http://www.dribbble.com/flicomastic" target="_blank" class="btn-twitch">Dribbble</a></li>
+			</ul>
+		</div>
+	</footer>
+	<a href="#0" class="cd-top">Top</a>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script>
+	function getRandomInt(min, max) {
+   		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+	$(function() {
+		$("header a.logo-header").hover(function(e) {
+		   $(this).css( "backgroundPosition", e.type=== "mouseenter"? "-" + (getRandomInt(0,4) * 74) + "px -123px" : "0px 0px");
+		});
+	});
+</script><!-- Logo action -->
+<script>
+	function nuevapagina() {
+		window.location = newLocation;
+	}
+	$(document).ready(function() {
+ 		$('.fade-in').click(function(e) {
+	 		e.preventDefault();
+	 		newLocation = this.href;
+	 		$('body').fadeOut(1000, nuevapagina);
+ 		});
+	$('body').fadeIn(1000); 
+	});
+</script><!-- Fade action -->
+</body>
+</html>

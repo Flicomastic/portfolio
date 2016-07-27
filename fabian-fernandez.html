@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Flicomastic | Diseñador web</title>
+	<link rel="stylesheet" href="css/style.css"> <!-- Animate letters -->
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body onunload="" class="bio">
+	<header>
+		<div class="general-wrapper">
+			<a href="index.html" class="logo-header fade-in" target="_blank"></a>
+			<img class="photo-bio" src="images/flicomastic-photo.jpg" alt="Fabián Fernández">
+		</div>
+	</header>
+	<section class="biography">
+		<div class="general-wrapper-bio">
+			<div class="bio">
+			<p>¡Hola de nuevo! como ya lo sabes soy Fabián Fernández, nací y crecí en Bogotá hace 30 años. Desde niño soy un apasionado por el fútbol, los videojuegos, la música de los 70's & 80's (punk, rock, disco), las formas y los colores. Gracias a mis gustos elegí el camino de la creatividad como desarrollo profesional y de mi personalidad.</p> 
+			<p>Trabaje en una agencia de medios digitales llamada Ennovva, donde me especialice en entender la necesidad de los usuarios a la hora de hacer compras online, trabajando para varios proyectos (startup) basados en el E-commerce. Al mismo tiempo que he trabajado en agencias me he mantenido activo como freelance (9 años). Gran parte de mi conocimiento en web y en experiencia de usuario se lo debo al medio en que me desenvuelvo "el internet". Me capacito constantemente en excelentes sitios de estudio como son: <a href="http://www.codeschool.com" target="_blank">CodeSchool</a> , <a href="http://tutsplus.com" target="_blank">Tutplus</a> y <a href="http://alistapart.com" target="_blank">A list apart</a>.</p>
+			<p>Soy alguien que cree que menos es mas y por eso el minimalismo debe estar a la orden del día. Entonces, ¿Quieres contactarme?</p>
+			<a href="mailto:flicomastic@gmail.com" target="_blank" class="btn-cv">Trabajemos juntos</a>
+			<a href="pdf/cv-fabian-fernandez-2016.pdf" target="_blank" class="btn-cv">Descarga mi C.V</a>
+			<p class="title-content">Encuentrame en:</p>
+			<ul class="findme">
+				<li><a href="https://twitter.com/flicomastic" target="_blank"><i class="icon-twitter"></i></a></li>
+				<li><a href="https://instagram.com/flicomastic" target="_blank"><i class="icon-instagram"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/flicomastic" target="_blank"><i class="icon-linkedin"></i></a></li>
+				<li><a href="http://www.dribbble.com/flicomastic" target="_blank"><i class="icon-dribbble"></i></a></li>
+				<li><a href="https://play.spotify.com/user/12124300061" target="_blank"><i class="icon-spotify"></i></a></li>
+				<li><a href="http://www.twitch.tv/flicomastic" target="blank"><i class="icon-twitch"></i></a></li>
+				<li><a href="mailto:flicomastic@gmail.com"><i class="icon-mail"></i></a></li>
+			</ul>
+			</div>
+			<aside class="skills">
+				<h3>Diseñador</h3>
+				<ul class="tags">
+				  <li class="cien"><span class="tag">Diseño de interfaz de usuario</span></li>
+				  <li class="cien"><span class="tag">Diseño de experiencia de usuario</span></li>
+				  <li class="cien"><span class="tag">Diseño Web</span></li>
+				  <li class="cien"><span class="tag">Diseño de interacción</span></li>
+				  <li class="cien"><span class="tag">Diseño de logos / Branding</span></li>
+				  <li class="ochenta"><span class="tag">Photoshop</span></li>
+				  <li class="cincuenta"><span class="tag">Illustrator</span></li>
+				</ul>
+				<h3>Frontend</h3>
+				<ul class="tags">
+				  <li class="cien"><span class="tag">Html / Css</span></li>
+				  <li><span class="tag">Jquery</span></li>
+				  <li><span class="tag">Sublimetext</span></li>
+				  <li class="cincuenta"><span class="tag">Ingles</span></li>
+				  <li><span class="tag">Italiano</span></li>
+				</ul>
+			</aside>
+		</div>
+	</section>
+	<footer class="bio">
+		<div class="wrapper-footer">
+			<blockquote>No sabemos tocar, pero si esperas hasta que aprendas, serás demasiado viejo.</blockquote>
+			<cite><a href="http://es.wikipedia.org/wiki/Johnny_Ramone" target="_blank">- Johnny Ramone -</a></cite>
+		</div>
+	</footer>
+	<a href="#0" class="cd-top">Top</a>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script>
+	function getRandomInt(min, max) {
+   		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+	$(function() {
+		$("header a.logo-header").hover(function(e) {
+		   $(this).css( "backgroundPosition", e.type=== "mouseenter"? "-" + (getRandomInt(0,4) * 74) + "px -123px" : "0px 0px");
+		});
+	});
+</script><!-- Logo action -->
+<script>
+	function nuevapagina() {
+		window.location = newLocation;
+	}
+	$(document).ready(function() {
+ 		$('.fade-in').click(function(e) {
+	 		e.preventDefault();
+	 		newLocation = this.href;
+	 		$('body').fadeOut(1000, nuevapagina);
+ 		});
+	$('body').fadeIn(1000); 
+	});
+</script><!-- Fade action -->
+</body>
+</html>
